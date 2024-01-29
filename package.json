@@ -1,5 +1,5 @@
 {
-  "name": "int222",
+  "name": "kishlayk568",
   "version": "1.0.0",
   "description": "",
   "main": "allTypesofVar.js",
@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "calculatorfile": "^1.0.0",
+    "jaskiratpackage": "^1.0.1",
     "lodash": "^4.17.21"
   }
 }
