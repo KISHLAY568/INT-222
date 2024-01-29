@@ -7,4 +7,4 @@ const intervalId = setInterval(repeatedFunction, 1000); //Executes every 1 secon
 setTimeout(() => {
   clearInterval(intervalId); //stop the interval
   console.log("iterval stopped.");
-}, 5000);
+}, 6000);
