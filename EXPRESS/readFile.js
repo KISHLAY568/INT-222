@@ -6,6 +6,7 @@ app.get("/readfile", (req, res) => {
   const filePath = "example.txt";
   fs.readFile(filePath, "utf8", (err, data) => {
     if (err) {
+        console.log(err);
       return res.status(500).send("Error reading the file");
     }
 
@@ -16,3 +17,4 @@ app.get("/readfile", (req, res) => {
 app.listen(port, () => {
   console.log(`Server is listening at http://localhost:${port}`);
 });
+
