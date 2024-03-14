@@ -13,6 +13,10 @@ app.use(express.static(path.join(__dirname)));
 
 io.on("connection", (socket) => {
   console.log("A user connected to the server");
+
+  socket.on("chat message", (msg) => {
+    io.emit("chat message", msg);
+  });
   socket.on("disconnect", () => {
     console.log("A user disconnected");
   });

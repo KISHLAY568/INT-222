@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <li id="list"></li>
+    <ul id="list"></ul>
     <form id="form">
       <input type="text" id="input" />
       <button id="">Send</button>
@@ -16,13 +16,19 @@
       const socket = io();
       const form = document.getElementById("form");
       const input = document.getElementById("input");
-
+      const list = document.getElementById("list");
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         if (input.value) {
           io.emit("chat message", input.value);
           input.value = "";
         }
+      });
+
+      socket.on("chat message", (msg) => {
+        const item = document.createElement("li");
+        item.textContent = msg;
+        list.appendChild(item);
       });
     </script>
   </body>
