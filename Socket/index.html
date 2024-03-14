@@ -20,7 +20,7 @@
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         if (input.value) {
-          io.emit("chat message", input.value);
+          socket.emit("chat message", input.value);
           input.value = "";
         }
       });
