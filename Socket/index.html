@@ -25,10 +25,20 @@
         }
       });
 
+      const username = prompt("Please enter your name:");
+      socket.emit("join", username);
+
       socket.on("chat message", (msg) => {
         const item = document.createElement("li");
-        item.textContent = msg;
+        if (msg.type === "notification") {
+          item.textContent = msg.message;
+          item.style.fontWeight = "bold";
+        } else {
+          item.textContent = `${msg.username}:${msg.message}`;
+        }
+
         list.appendChild(item);
+        list.scrollTop = list.scrollHeight;
       });
     </script>
   </body>
