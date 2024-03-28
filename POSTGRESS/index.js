@@ -40,6 +40,23 @@ app.post("/todos", (req, res) => {
   );
 });
 
+app.put("/todos/:id", (req, res) => {
+  const { id } = req.params;
+  const { title, completed } = req.body;
+  pool.query(
+    "UPDATE todos SET title = $1, completed = $2 WHERE id = $3",
+    [title, completed, id],
+    (error) => {
+      if (error) {
+        console.error("Error updating todo", error);
+        res.status(500).json({ error: "Internal server error" });
+      } else {
+        res.json({ message: "Todo updated successfully" });
+      }
+    }
+  );
+});
+
 app.listen(port, () => {
   console.log("server is running on port 3000");
 });
