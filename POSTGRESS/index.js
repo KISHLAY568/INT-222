@@ -57,6 +57,18 @@ app.put("/todos/:id", (req, res) => {
   );
 });
 
+app.delete("/todos/:id", (req, res) => {
+  const { id } = req.params;
+  pool.query("DELETE FROM todos WHERE id = $1", [id], (error) => {
+    if (error) {
+      console.error("Error deleting todo", error);
+      res.status(500).json({ error: "Internal server error" });
+    } else {
+      res.json({ message: "Todo deleted successfully" });
+    }
+  });
+});
+
 app.listen(port, () => {
   console.log("server is running on port 3000");
 });
