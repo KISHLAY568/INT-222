@@ -24,6 +24,22 @@ app.get("/todos", (req, res) => {
   });
 });
 
+app.post("/todos", (req, res) => {
+  const { title, completed } = req.body;
+  pool.query(
+    "INSERT INTO todos (title,completed) VALUES ($1,$2)",
+    [title, completed],
+    (error) => {
+      if (error) {
+        console.error("Error creating todo", error);
+        res.status(500).json({ error: "Internal server error" });
+      } else {
+        res.status(201).json({ message: "Todo created successfully" });
+      }
+    }
+  );
+});
+
 app.listen(port, () => {
   console.log("server is running on port 3000");
 });
