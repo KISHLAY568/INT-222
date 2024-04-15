@@ -53,6 +53,18 @@ app.put("/users/:id", (req, res) => {
     })
     .catch((err) => res.status(400).json({ message: err.message }));
 });
+
+app.delete("/users/:id", (req, res) => {
+  const userId = req.params.id;
+  User.findByIdAndDelete(userId).then(deletedUser=>{
+    if(!deletedUser){
+      return res.status(404).json({ message: "user not found" });
+    }
+    res.json({message:'user deleted successfully'});
+  })
+  .catch((err) => res.status(400).json({ message: err.message }));
+});
+
 app.listen(port, () => {
   console.log("server is live on port 3000");
 });
