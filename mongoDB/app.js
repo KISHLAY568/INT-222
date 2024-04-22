@@ -1,10 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require('path');
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
 
 mongoose
   .connect("mongodb://127.0.0.1:27017/user_management_db")
