@@ -1,6 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const path = require('path');
+const path = require("path");
+require("dotenv").config();
+
+const mogoURL = process.env.MONGO_URL;
 
 const app = express();
 const port = 3000;
