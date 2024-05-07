@@ -1,3 +1,4 @@
+
 const zlib = require("zlib");
 const input = "Hello, world!";
 
@@ -14,3 +15,4 @@ zlib.gzip(input, (err, compressedData) => {
     console.log("Decompressed data:", decompressdData.toString());
   });
 });
+

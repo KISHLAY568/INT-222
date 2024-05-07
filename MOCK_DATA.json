@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "first_name": "Francene",
+    "last_name": "Renad",
+    "email": "frenad0@chicagotribune.com",
+    "gender": "Female"
+  },
+  {
+    "id": 2,
+    "first_name": "Ferguson",
+    "last_name": "Sifflett",
+    "email": "fsifflett1@bbc.co.uk",
+    "gender": "Male"
+  },
+  {
+    "id": 3,
+    "first_name": "Nobe",
+    "last_name": "Wakes",
+    "email": "nwakes2@constantcontact.com",
+    "gender": "Male"
+  },
+  {
+    "id": 4,
+    "first_name": "Orton",
+    "last_name": "Oldmeadow",
+    "email": "ooldmeadow3@businessinsider.com",
+    "gender": "Male"
+  },
+  {
+    "id": 5,
+    "first_name": "Zorine",
+    "last_name": "Truscott",
+    "email": "ztruscott4@ibm.com",
+    "gender": "Female"
+  },
+  {
+    "id": 6,
+    "first_name": "Jens",
+    "last_name": "Beeres",
+    "email": "jbeeres5@latimes.com",
+    "gender": "Genderqueer"
+  },
+  {
+    "id": 7,
+    "first_name": "Mona",
+    "last_name": "Cristofaro",
+    "email": "mcristofaro6@sina.com.cn",
+    "gender": "Agender"
+  },
+  {
+    "id": 8,
+    "first_name": "Moina",
+    "last_name": "Vanyushkin",
+    "email": "mvanyushkin7@storify.com",
+    "gender": "Female"
+  },
+  {
+    "id": 9,
+    "first_name": "Carrie",
+    "last_name": "Dunning",
+    "email": "cdunning8@vk.com",
+    "gender": "Female"
+  },
+  {
+    "id": 10,
+    "first_name": "Claudio",
+    "last_name": "Handrahan",
+    "email": "chandrahan9@tamu.edu",
+    "gender": "Male"
+  }
+]
