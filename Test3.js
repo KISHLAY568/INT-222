@@ -9,10 +9,10 @@ const server = http.createServer((req, res) => {
 
   res.writeHead(200, {
     "Content-Type": "text/plain",
-    "content-encoding": "gzip",  //Setting the content encoding to gzip
+    "content-encoding": "gzip", //Setting the content encoding to gzip
   });
   // Compressing the file and piping it to the response stream
-  readStream.pipe(zlib.gzip()).pipe(res);
+  readStream.pipe(zlib.createGzip()).pipe(res);
 
   readStream.on("error", (err) => {
     console.error("Error reading file:", err);

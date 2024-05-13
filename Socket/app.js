@@ -11,6 +11,7 @@ const io = socketIO(server);
 
 app.use(express.static(path.join(__dirname)));
 
+
 io.on("connection", (socket) => {
   console.log("A user connected to the server");
 
@@ -39,3 +40,5 @@ io.on("connection", (socket) => {
     }
   });
 });
+
+
